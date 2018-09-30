@@ -1,0 +1,182 @@
+.header-intro-resume {
+	height: 320px;
+	.container {
+		max-width: 1000px;
+	}
+}
+
+.download-resume {
+	right: 15px;
+	top: 0;
+}
+
+.resume-wrapper {
+	margin-top: -180px;
+	padding-bottom: 100px;
+	
+}
+
+.resume-wrapper-inner {
+	max-width: 1000px;
+}
+
+.resume-header {
+	background: $theme-text-color-primary;
+	color: rgba(256, 256, 256, 0.9);
+	height: 220px;
+	.picture {
+		width: 220px;
+	}
+		
+	.name {
+		font-size: 2.25rem;
+		letter-spacing: 0.175rem;	
+		font-weight: 900;
+	}
+	.title {
+		font-size: 1.5rem;
+	}
+	
+	a {
+		color: rgba(256, 256, 256, 0.6);
+		&:hover {
+			color: white;
+		}
+		
+	}
+	
+	
+}
+.resume-social {
+	font-size: 0.875rem;
+
+	.fa-container {
+		font-size: 1rem;
+		display:inline-block;
+		width: 24px;
+		height: 24px;
+		@include border-radius(0.125rem);
+		background: white;
+		color: $theme-text-color-primary;
+	}
+
+}
+
+.resume-section-title {
+	font-size: 1.25rem;
+	position: relative;
+	color: $theme-text-color-primary;
+	
+	&:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 1.5px;
+		background: lighten($theme-text-color-primary, 30%);
+	}
+}
+
+.resume-section-content {
+	color: $theme-text-color-secondary;
+}
+
+
+.resume-timeline {
+	padding-left: 2rem;
+	&:before {
+		content: "";
+		display: inline-block;
+	    width: 3px;
+	    height: 100%;
+	    background: lighten($theme-text-color-primary, 50%);
+	    left: 6px;
+	    top: 4px;
+	    position: absolute;
+	}
+}
+
+.resume-timeline-item {
+	&:before {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		left: -32px;
+		top: 3px;
+		width: 15px;
+		height: 15px;
+		border: 4px solid lighten($theme-text-color-primary, 20%);
+		background: white;
+		@include border-radius(50%);
+		
+	}
+}
+
+.resume-progress {
+	height: 0.6rem;
+}
+
+.resume-company-name {
+	color: $theme-text-color-secondary;
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+
+.resume-position-time {
+	font-size: 0.875rem;
+	color: $theme-text-color-light;
+}
+
+.resume-position-title {
+	font-size: 1.125rem;
+	color: $theme-text-color-primary;
+}
+
+.resume-timeline-item-desc-heading {
+	font-size: 1rem;
+}
+
+.resume-skills-cat {
+	font-size: 1rem;
+	color: $theme-text-color-primary;
+}
+
+.resume-skill-name {
+	font-size: 0.8125rem;
+	color: $theme-text-color-primary;
+}
+
+.resume-degree {
+	color: $theme-text-color-primary;
+}
+.resume-degree-org {
+	font-size: 0.875rem;
+}
+.resume-degree-time {
+	color: $theme-text-color-light;
+	font-size: 0.875rem;
+}
+
+.resume-awards-list {
+
+}
+
+.resume-award-icon {
+	left: 0;
+	top: 4px;
+	color: $theme-text-color-light;
+}
+
+.resume-award-name {
+	font-weight:bold;
+	color: $theme-text-color-primary;
+}
+
+.resume-award-desc {
+	font-size: 0.875rem;
+}
+
+.resume-lang-name {
+	color: $theme-text-color-primary;
+}

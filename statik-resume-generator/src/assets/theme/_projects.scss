@@ -1,0 +1,143 @@
+.filters {
+	list-style: none;
+	.type {
+		display: inline-block;
+		padding: 0.275rem 0.875rem;
+		@include border-radius(4px);
+		cursor: pointer;
+		&.active {
+			background: $theme-color-primary;
+			color: #fff;
+			//font-weight: bold;
+			&:hover {
+				background: $theme-color-primary;
+			    color: #fff;
+			}
+		}
+		&:hover {
+			background: lighten($theme-text-color-light, 20%);
+		}
+	}
+}
+
+.page-heading {
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+.page-heading-tagline {
+	 max-width: 700px;
+	 font-size: 1.25rem;
+}
+
+.page-heading-logo {
+	right: 15px;
+	top: 0;
+	background: rgba(0, 0, 0, 0.2);
+	padding: 0.2rem 1rem;
+	@include border-radius(4px);
+	.client-logo {
+		width: 160px;
+	}
+}
+
+.project-wrapper {
+	
+	font-size: 1.25rem;
+	line-height: 1.6;
+	color: $theme-text-color-secondary;
+	.cover-image {
+		margin-bottom: 2rem;
+	}
+	p {
+		margin-bottom: 3rem;
+		
+	}
+	.section-title {
+		color: $theme-text-color-primary;
+		margin-bottom: 2rem;
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+	.section-row {
+		margin-bottom: 6rem;
+	}
+}
+
+
+
+
+.theme-carousel {
+	.carousel-indicators {
+		bottom: -2rem;
+		li {
+			background: lighten($theme-text-color-light, 15%);
+			height: 4px;
+			@include border-radius(2px);
+			&.active {
+				background: $theme-text-color-primary;
+			}
+			cursor: pointer;
+		}
+		
+	}
+	
+	.carousel-control-prev {
+	left: -1.5rem;
+	}
+	.carousel-control-next {
+		right: -1.5rem;
+	}
+	
+	.carousel-control-prev, .carousel-control-next {
+		font-size: 3rem;
+		color: $theme-text-color-primary;
+		svg {
+			width: 40px;
+			height: 40px;
+			padding: 0.65rem;
+			background: $theme-text-color-primary;
+			@include border-radius(50%);
+			text-align: center;
+		}
+	}
+
+}
+
+
+.ekko-lightbox-nav-overlay a {
+	color: $theme-text-color-primary;
+	position: relative;
+	.arrow-left {
+		position: absolute;
+		left: 1rem;
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		background: url('images/arrow-left.svg') no-repeat center center;
+		@include background-size(contain);
+	}
+	
+	.arrow-right {
+		position: absolute;
+		right: 1rem;
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		background: url('images/arrow-right.svg') no-repeat center center;
+		@include background-size(contain);
+	}
+}
+
+.project-sidebar {
+	font-size: 1rem;
+	line-height: 1.6;
+	color: $theme-text-color-secondary;
+	
+}
+
+.sidebar-title {
+	font-size: 1.25rem;
+	font-weight:bold;
+	color: $theme-text-color-primary;
+}

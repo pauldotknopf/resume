@@ -1,0 +1,48 @@
+/*!  
+ * Instance - Bootstrap 4 Portfolio Template For Developers
+ * Version: 1.0
+ * Author: Xiaoying Riley
+ * Copyright: 3rd Wave Media Ltd.
+ * Website: http://themes.3rdwavemedia.com/
+ * Twitter: @3rdwave_themes
+*/
+@import "mixins";
+@import "base";
+@import "about";
+@import "projects";
+@import "talks";
+@import "blog";
+@import "resume";
+@import "contact";
+@import "responsive";
+@import "plugins";
+
+.resume-projects-list {
+    .resume-project-link {
+        color: $theme-text-color-light;
+        text-decoration: none;
+        @include hover {
+            color: $theme-text-color-light;
+            text-decoration: none;
+        }
+    }
+    .resume-project-name {
+        font-weight:bold;
+        color: $theme-text-color-primary;
+    }
+    .resume-project-desc {
+        font-size: 0.875rem;
+    }
+    .resume-project-item-desc-heading {
+        font-size: 1rem;
+    }
+}
+
+.header-intro {
+    .container {
+        display: none;
+    }   
+}
+.header-intro-resume {
+    height: 220px;
+}

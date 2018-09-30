@@ -1,0 +1,160 @@
+@inject Resume.Config.ResumeConfig Config
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>@Config.Personal.Name - Resume</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+	<link href="@Url.Content("~/dist/styles.css")" rel="stylesheet" type="text/css"/>
+	<script src="@Url.Content("~/dist/scripts.js")"></script>
+</head> 
+<body>
+    <header class="header">
+        <div class="header-intro header-intro-resume theme-bg-primary text-white py-5">
+	        <div class="container position-relative">
+		        <h2 class="page-heading mb-3">Resume</h2>
+		        <a class="btn theme-btn-on-bg download-resume position-absolute font-weight-bold mx-auto" href="#"><i class="fas fa-download mr-2"></i>Download PDF Version</a>
+	        </div>
+        </div>
+    </header>
+<article class="resume-wrapper text-center position-relative">
+	<div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
+		<header class="resume-header pt-4 pt-md-0">
+			<div class="media flex-column flex-md-row">
+				<img class="mr-3 img-fluid picture mx-auto" src="@Url.Content(Config.Personal.Image)" alt="">
+				<div class="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
+					<div class="primary-info">
+						<h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">@Config.Personal.Name</h1>
+						<div class="title mb-3">@Config.Personal.PositionTitle</div>
+						<ul class="list-unstyled">
+							<li class="mb-2"><a href="mailto:@Config.Personal.Email"><i class="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>@Config.Personal.Email</a></li>
+							<li><a href="tel:@Config.Personal.Phone"><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>@Config.Personal.Phone</a></li>
+						</ul>
+					</div>
+					<div class="secondary-info ml-md-auto mt-2">
+						<ul class="resume-social list-unstyled">
+							@foreach (var link in Config.Personal.Links)
+							{
+								<li class="@(Config.Personal.Links.IndexOf(link) < (Config.Personal.Links.Count - 1) ? "mb-3" : "")"><a href="@link.Url"><span class="fa-container text-center mr-2"><i class="@link.Icon fa-fw"></i></span>@link.Name</a></li>
+							}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="resume-body p-5">
+			<section class="resume-section summary-section mb-5">
+				<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Career Summary</h2>
+				<div class="resume-section-content">
+					@Html.Raw(Config.Resume.Career)
+				</div>
+			</section>
+			<div class="row">
+				<div class="col">
+					<section class="resume-section experience-section mb-5">
+						<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Work Experience</h2>
+						<div class="resume-section-content">
+							<div class="resume-timeline position-relative">
+								@foreach (var experience in Config.Resume.Experience)
+								{
+									<article class="resume-timeline-item position-relative pb-5">
+										<div class="resume-timeline-item-header mb-2">
+											<div class="d-flex flex-column flex-md-row">
+												<h3 class="resume-position-title font-weight-bold mb-1">@experience.Title</h3>
+												<div class="resume-company-name ml-auto">@experience.Company</div>
+											</div>
+											<div class="resume-position-time">@experience.Time</div>
+										</div>
+										<div class="resume-timeline-item-desc">
+											@Html.Raw(experience.Description)
+											@if (experience.TechUsed != null && experience.TechUsed.Count > 0)
+											{
+												<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
+												<ul class="list-inline">
+													@foreach (var tech in experience.TechUsed)
+													{
+														<li class="list-inline-item"><span class="badge badge-secondary badge-pill">@tech</span></li>
+													}
+												</ul>
+											}
+										</div>
+									</article>
+								}
+
+							</div>
+						</div>
+					</section>
+					<section class="resume-section skills-section mb-5">
+						<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Skills &amp; Tools</h2>
+						<div class="resume-section-content row">
+							@foreach (var skillGroup in Config.Resume.Skills)
+							{
+								<div class="resume-skill-item col-12 col-md-6">
+									<h4 class="resume-skills-cat font-weight-bold">@skillGroup.GroupName</h4>
+									<ul class="list-inline">
+										@foreach (var skill in skillGroup.Values)
+										{
+											<li class="list-inline-item"><span class="badge badge-light">@skill</span></li>
+										}
+									</ul>
+								</div>
+							}
+						</div>
+					</section>
+					@if (Config.Resume.Projects.Count > 0)
+					{
+						<section class="resume-section reference-section mb-5">
+							<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Projects</h2>
+							<div class="resume-section-content">
+								<ul class="list-unstyled resume-projects-list">
+									@foreach (var project in Config.Resume.Projects)
+									{
+										<li class="mb-5">
+											<div class="resume-project-name">@project.Name &nbsp;&nbsp;<a class="resume-project-link" href="@project.Link.Url"><i class="@project.Link.Icon" data-fa-transform="shrink-2"></i> @project.Link.Name</a></div>
+											<div class="resume-project-desc">
+												@Html.Raw(project.Description)
+												@if (project.TechUsed.Count > 0)
+												{
+													<h4 class="resume-project-item-desc-heading font-weight-bold">Technologies used:</h4>
+													<ul class="list-inline">
+														@foreach (var tech in project.TechUsed)
+														{
+															<li class="list-inline-item"><span class="badge badge-secondary badge-pill">@tech</span></li>
+														}
+													</ul>
+												}
+											</div>
+										</li>
+									}
+								</ul>
+							</div>
+						</section>
+					}
+					<section class="resume-section education-section mb-5">
+						<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Education</h2>
+						<div class="resume-section-content">
+							<ul class="list-unstyled">
+								@foreach (var education in Config.Resume.Education)
+								{
+									<li class="@(Config.Resume.Education.IndexOf(education) < (Config.Resume.Education.Count - 1) ? "mb-2" : "")">
+										<div class="resume-degree font-weight-bold">@education.Major</div>
+										<div class="resume-degree-org">@education.School</div>
+										<div class="resume-degree-time">@education.Time</div>
+									</li>
+								}
+							</ul>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>
+<footer class="footer text-light text-center py-2">
+	<a href="@Config.General.ResumeRepo.Url" class="text-light"><i class="@Config.General.ResumeRepo.Icon"></i> @Config.General.ResumeRepo.Name</a>
+</footer>
+</body>
+</html> 

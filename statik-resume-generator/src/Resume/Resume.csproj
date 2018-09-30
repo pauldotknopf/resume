@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+
+    <!--
+      This is required for compiling razor views in a console app.
+      It is supposed to be fixed in 2.1, so we can remove it then.
+      https://github.com/aspnet/Razor/issues/1212
+    -->
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Markdig" Version="0.15.3" />
+    <PackageReference Include="PowerArgs" Version="3.5.0" />
+    <PackageReference Include="Statik" Version="0.8.0" />
+    <PackageReference Include="Statik.Files" Version="0.8.0" />
+    <PackageReference Include="Statik.Mvc" Version="0.8.0" />
+    <PackageReference Include="YamlDotNet" Version="5.1.0" />
+  </ItemGroup>
+
+</Project>

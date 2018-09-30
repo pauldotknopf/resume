@@ -1,0 +1,190 @@
+career: |
+  I am a passionate programmer, doing what I love for a living.
+
+  I first taught myself programming (VB .NET) early on in high school for a website idea I had. Shortly after, I became addicted to the creative possibilities and my passion has never left me.
+
+  I enjoy building creative solutions to complex problems (and the teams surrounding them) that provide high value to the end users. Using simplicity, expressiveness and maintainability to incrementally and iteratively provide value, I can ensure that the solutions I build are built-to-last, while also being flexible enough to reflect constantly changing requirements.
+
+  While I am confortable in many languages/environments, what I enjoy the most is .NET/React/TypeScript (Angular too, but I haven't gotten my hands dirty). The early part of my career had been primarily focused on Windows, but I tend to lean more on unix operating systems (Linux/OSX). I'm my strongest in a terminal, which Windows just isn't well-suited for.
+
+  I also love the CI/CD side of engineering. Working with a team/organization to determine the best approach to commit and deploy with confidence is a challenge I will always take. Once developers get into the groove of developing features without fires to be hosed or tooling to fight, life becomes a little better for *everybody*.
+
+  I manage a few open-source projects in different languages, including JavaScript, C# and Go.
+
+  Also, I'll be the first to tell you that I've made mistakes in career, but I use them to my advantage. Remember, incremental improvement!
+experience:
+  - company: Med X Change
+    title: Senior Software Engineer
+    time: Nov 2012 - Present
+    description: |
+      Managing a team of people on a wide-array of projects across different languages/platforms. 
+      Managing the internal DevOps life-cycle (commit/review/build/version/deploy/support) for embedded systems (Linux and Windows) and web projects (Docker/ASP.NET MVC/etc).
+
+      **Some key points:**
+      * Develop/design recording software for the medical industry.
+      * DirectShow and gstreamer for encoding/decoding with various video formats, including H264/MP4.
+      * WPF and Qt/QtQuick implementations of digital recording software on embedded devices.
+      * iOS/Android application development using the Xamarin platform.
+      * C++/C for internal libraries used to connect to record video and connect to hospital networks (DICOM/HL7).
+      * Custom Embedded Linux distros for embedded devices (Yocto).
+        * Brickless update design.
+        * Read-only boot with ```tmpfs``` overlay for stability and resilience.
+      * Compilation and cross-compilation (vc++/gcc/MAKE/CMAKE/meson/autotools/etc).
+      * ASP.NET (and .NET Core) for physicians and patients to view studies.
+      * Manage IT infrastructure for software and project management.
+    tech_used:
+      - .NET
+      - ASP.NET MVC
+      - WPF
+      - Qt
+      - Docker
+      - SQLite
+      - MongoDB
+      - C/C++
+      - DICOM
+      - HL7
+      - Embedded Linux
+      - Google Cloud Platform
+      - Continuous Integration
+      - Unit Testing
+      - Atlassian
+  - company: MethodFactory
+    title: Software Engineer
+    time: Jun 2011 - Dec 2012
+    description: |
+      * Managed a prescriptive framework written in C# .NET 4.0 used to accelerate and model application development according to industry best practices.
+      * Managed an internal automated NuGet feed (using TFS Build) for delivering updates.
+      * Database design and development. Managing indexes/performance. Troubleshooting with SQL Profiler.
+      * Created a process to managing SQL Server Database Projects (SSDT) so that framework libraries can be distributed with matching .dacpac files for client schema updating/generating. The process also included automated deployments of database schema and projects from TFS builds for Continuous Integration and validation of the build.
+      * Wrote and managed C# TFS Build Activity that creates and deploys multiple NuGet packages.
+      * Implemented an enterprise WCF Service Host Factory that uses IoC (Dependency Injection) to resolve contracts for runtime composability.
+      * Created WCF Services using REST/JSON for use on client side widgets.
+      * Created an MVC3/jQuery eCommerce UI foundation for eCommerce websites. Delivered to projects in a .zip file delivered by a VirtualPathProvider for easy updating and ensuring stability. Added support for overriding at every level (css/js/view) for client specific adjustments using a MVC ViewEngine and a client-side dependency management framework (Cassette).
+      * Implemented/created a jQuery plugin in ASP.NET MVC3 to enable extensible keyboard navigation with 100% client-side interaction from the point of entry.
+      * Designed enterprise N-tier framework to be reused by multiple enterprise clients (Coleman, Nuk, Rawlings).
+      * Designed/developed software for medical equipment for capturing and recording pictures and videos using MSMQ/NServiceBus/SignalR to send messages between the website and hardware.
+    tech_used:
+      - .NET
+      - ASP.NET MVC
+      - SQL Server
+      - TFS
+      - Microsoft Test Manager
+      - Microsoft Commerce Server
+      - Windows Server 2008/2012
+  - company: Adept Web Studios
+    title: Freelance Software Engineer
+    time: Jun 2009 - June 2011
+    description: |
+      * Re-wrote nopCommerce from WebForms to ASP.NET MVC. Contributed it back to nopCommerce for the V3+ release.
+      * Design and develop custom solutions from cms to e-commerce using the appropriate technologies.
+      * Created a Lucene.NET implementation for faceted searching in eCommerce solutions (nopCommerce).
+      * Wrote and sold plugins and themes for nopCommerce.
+      * Wrote a CMS integration for nopCommerce to bring advanced CMS technologies to an eCommerce driven website.
+  - company: Dataline Associates
+    title: Software Developer
+    time: Sep 2009 - Aug 2011
+    description: |
+      * Managing catalog and orders (25,000 products) using MSMQ to handle product/inventory updates.
+      * Integration into 3rd party websites for price comparison and analytics.
+      * Managing web server (Windows Server 2008 R2) and database for high-uptime and high-load.
+projects:
+  - name: Qml.Net
+    link:
+      name: github.com/qmlnet/qmlnet
+      url: https://github.com/qmlnet/qmlnet
+      icon: fab fa-github
+    description: |
+      An integration of .NET and QML for cross platform and high-performance desktop applications. I built a thin C layer with C++ shared pointers to integrate the two garbage collectors (.NET and QML-JavaScript). AppVeyor and Travis CI are configured to ensure a suite of tests pass for each commit on every major platform (Linux/OSX/Windows).
+    tech_used:
+      - C/C++
+      - .NET Core
+      - QT
+      - Continuous Integration
+  - name: Darch
+    link:
+      name: godarch.com
+      url: https://godarch.com/
+      icon: fab fa-github
+    description: |
+      Think "Dockerfiles", but for immutable, stateless, graphical (or not) environments, booted bare-metal. I use this tool as my daily driver for Linux. Each distribution contains a custom initramfs that overlays a temporary file system over your read-only Darch images. This allows each boot to be a clean boot. Any change made to the runtime (```apt-get install```, etc) are discarded on each boot. Any change you want persisted have to be scripted and baked into your recipes (which is a good thing!).
+    tech_used:
+      - Go
+      - Docker
+      - containerd
+      - Continuous Integration
+  - name: React ASP.NET Boilerplate
+    link:
+      name: github.com/pauldotknopf/react-aspnet-boilerplate
+      url: https://github.com/pauldotknopf/react-aspnet-boilerplate
+      icon: fab fa-github
+    description: |
+      A boilerplate project used for a few personal projects of mine. It is a clone of the default ASP.NET template, written in React, that includes login (internal/external) and account management. There aren't many opinions and uses only well-established libraries and patterns. It also includes server-side rendering, allowing ASP.NET MVC controllers to provide the data needed to render each page on the server. After the initial render, client-side routing handles all future navigation. Since the server renders JavaScript, there is no need for Razor anywhere.
+    tech_used:
+      - React
+      - ASP.NET
+      - .NET Core
+      - Entity Framework Core
+      - gulp
+      - webpack
+      - redux
+      - Server-side rendering
+skills:
+  - group_name: Languages
+    values:
+      - C#
+      - HTML/CSS
+      - JavaScript/Node
+      - TypeScript
+      - Go
+      - C++/C
+      - Unix Shell Scripts
+      - SQL
+      - Python
+  - group_name: Client-side
+    values:
+      - React
+      - redux
+      - MobX
+      - webpack
+      - Gulp/Grunt
+      - Jest
+      - Sass/LESS
+      - Bootstrap
+      - SSR
+      - Electron
+      - jQuery
+  - group_name: Operating systems
+    values:
+      - Unix/Linux
+      - OSX
+      - Windows
+      - Windows Server
+  - group_name: Linux distributions
+    values:
+      - Yocto
+      - Ubuntu
+      - OpenSUSE
+      - Arch
+      - Gentoo
+      - VoidLinux
+  - group_name: IDEs/Debuggers/Compilers/Source Control
+    values:
+      - Visual Studio
+      - Visual Studio for Mac
+      - Visual Studio Code
+      - Rider (JetBrains)
+      - Qt/Creator
+      - Git
+      - TFS
+      - SubVersion
+      - GCC/G++
+      - Clang
+      - Makefile
+      - CMake
+      - Meson
+education:
+  - major: MCPD/MCTS .NET Web Developer
+    time: "MCP ID: 8482776"
+  - major: Associates of Liberal Arts and Science
+    school: State College of Florida.
+    time: GPA 3.6 2008-2010

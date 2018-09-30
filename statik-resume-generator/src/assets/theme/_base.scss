@@ -1,0 +1,214 @@
+/* ============= Base ============= */
+
+/*********** Theme Variables **********/
+$theme-width-restrict: 780px;
+
+
+/*********** Theme Generic **********/
+body {
+    font-family: 'Roboto', sans-serif;  
+    background: $theme-bg-light;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $theme-text-color-primary;
+    
+}
+
+.btn {
+	font-weight: 500;
+	padding: .375rem 1rem
+}
+
+.btn:focus, .btn.focus {
+	box-shadow: none !important;
+}
+
+.theme-btn-cta {
+	width: 100%;
+	padding: 0.6rem 1.5rem;
+}
+
+
+
+.footer {
+	background: $theme-text-color-primary;
+}
+
+
+.form-control {
+	padding-top: 0.875rem;
+	padding-bottom: 0.875rem;
+}
+
+.badge {
+	padding: 0.35em 0.7em;
+	padding-bottom: 0.4em;
+}
+
+#topcontrol {
+    @include transition (all 0.4s ease-in-out);
+    background: $theme-text-color-secondary;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    z-index: 30;
+    width: 36px;
+    height: 36px;
+    @include border-radius(0.25rem);
+    @include box-shadow(0 6px 10px 0 rgba(0,0,0,0.3));
+    padding-top: 6px;
+    font-weight: 300;
+    &:hover {
+        background: darken($theme-text-color-secondary, 10%);
+        color: #fff;
+    }
+    .fas {
+        font-size: 25px;
+    }
+}
+
+
+/*********** Theme Utilities **********/
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	//IE9 + 10
+   .svg-ie-fix {
+		width: 100%;
+	}
+}
+
+
+.font-style-normal {
+	font-style: normal !important;
+}
+
+.link-on-bg, a.link-on-bg {
+	color: rgba(0, 0, 0, 0.5);
+	&:hover {
+		color: rgba(0, 0, 0, 0.6);
+	}
+}
+
+.presudo-hidden {
+	&:before {
+		display: none !important;
+	}
+	&:after {
+		display: none !important;
+	}
+}
+
+.theme-bg-primary {
+	background-color: $theme-color-primary;
+}
+
+.theme-bg-primary-darken {
+	background-color: darken($theme-color-primary, 20%);
+}
+
+a.theme-btn-on-bg, .theme-btn-on-bg {
+	background: rgba(0, 0, 0, 0.2);
+	color: #fff;
+	border: none;
+	&:hover, &:focus, &:active {
+		background: rgba(0, 0, 0, 0.4);
+		border-color: transparent;border: none;
+	}
+	
+}
+
+.progress {
+	@include border-radius(2px);
+}
+
+.theme-progress-bar-dark {
+	background-color: $theme-text-color-secondary;
+	
+}
+
+.single-col-max-width {
+	max-width: 860px;
+}
+
+/* Header */
+.social-list {
+	a {
+		width: 36px;
+		height: 36px;
+		padding-top: 7px;
+		display: inline-block;
+		text-align: center;
+		@include border-radius(50%);
+		@include transition(all 0.4s ease-in-out);
+		&:hover {
+			background: rgba(0, 0 ,0, 0.2);
+		}
+		
+	}
+}
+
+#navigation {
+	font-size: 0.875rem;
+	.active {
+		font-weight: 600;
+	}
+	
+	.dropdown-menu {
+		@include border-radius(2px);
+		&:before {
+			content: "";
+		    display: block;
+		    width: 0;
+		    height: 0;
+		    border-left: 8px solid transparent;
+		    border-right: 8px solid transparent;
+		    border-bottom: 8px solid #fff;
+		    position: absolute;
+		    right: 32px;
+		    top: -8px;
+		}
+	}
+	.dropdown-item {
+		font-size: 0.875rem;
+		padding: 0.5rem 1.25rem;
+		
+		&:hover {
+			color: $theme-text-color-primary;
+		}
+		
+		&:active {
+			color: #fff;
+		}
+		
+	}
+}
+
+.navbar-dark .navbar-toggler {
+	border: none;
+	padding: 0;
+	font-size: inherit;
+	@include border-radius(0);
+}
+
+.navbar-dark .navbar-toggler-icon {
+	background: url('images/bars.svg') no-repeat left top;
+	height: 20px;
+	width: 24px;
+	
+	
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	&:active {
+		color: #fff;
+	}
+}
+/* sliding menu underline */
+#slide-line{
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    background-color:rgba(256, 256, 256, 0.8);
+    @include border-radius(2px);
+    @include transition(all 0.4s ease-in-out);
+}

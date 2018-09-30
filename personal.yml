@@ -1,0 +1,12 @@
+name: Paul Knopf
+position_title: Full Stack Developer
+email: pauldotknopf@gmail.com
+phone: (941) 807-5340
+image: ~/profile.png
+links:
+  - name: github.com/pauldotknopf
+    url: https://github.com/pauldotknopf
+    icon: fab fa-github
+  - name: twitter.com/pauldotknopf
+    url: https://twitter.com/pauldotknopf
+    icon: fab fa-twitter

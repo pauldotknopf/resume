@@ -1,0 +1,181 @@
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+	.talk-media-holder {
+		width: 100%;
+		
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .theme-btn-cta {
+		width: inherit;
+		display: inline-block;
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	.talk-media-holder {
+		width: 55%;
+		
+	}
+	
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+	.talk-media-holder {
+		width: 60%;
+		
+	}
+}
+
+
+// We occasionally use media queries that go in the other direction (the given screen size or smaller):
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+	#slide-line {
+		display: none !important;
+	}
+	.dropdown-menu {
+		background: rgba(0, 0, 0, 0.05);
+		@include box-shadow(none !important);
+		color: #fff;
+		border: none;
+	}
+	#navigation {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+	#navigation .dropdown-menu:before {
+		display: none;
+	}
+	#navigation .dropdown-item {
+		color: #fff;
+		&:hover {
+			background: rgba(0, 0, 0, 0.1);
+			color: #fff;
+		}
+	}
+}
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+	
+	.author-block {
+		text-align: center;
+		.author-profile, .author-info {
+			margin: 0 auto;
+		}
+	}
+	
+	.source-link {
+		position: static !important;
+	}
+	.client-profile {
+		text-align: center;
+		img {
+			margin: 0 auto;
+		}
+		.quote-source {
+			margin: 0 auto;
+		}
+		
+	}
+	.project-wrapper .section-title {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		
+	}
+	
+	.project-wrapper {
+		font-size: 1.125rem;
+	}
+	
+	.project-wrapper p {
+		font-size: 1.125rem;
+	}
+	
+	.theme-carousel .carousel-control-prev {
+		left: 0;
+	}
+	
+	.theme-carousel .carousel-control-next {
+		right: 0;
+	}
+	
+	.testimonial-item {
+		width:80%;
+		.shadow-lg {
+			@include box-shadow($box-shadow-sm !important);
+		}
+	}
+	
+	.resume-header {
+		height: auto;
+	}
+	.resume-header .picture {
+		width: 120px;
+		@include border-radius(4px);
+	}
+	
+	.header-intro {
+		text-align: center;
+	}
+	.download-resume {
+		position: static !important;
+		
+	}
+	
+	.header-intro-resume {
+		height: auto;
+	}
+	
+	.resume-wrapper {
+		margin-top: 0;
+	}
+	
+	.page-heading-logo {
+		position: static !important;
+	}
+	
+	.blog-cards {
+		.featured-card {
+			display: block !important;
+		}
+		.featured-card-image {
+			display: block !important;
+			width: 100%;
+			height: 200px
+		}
+		.featured-card-body{
+			display: block !important;
+			width: 100%;
+		}
+	}
+	
+	
+
+	
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+	.testimonial-item {
+		width:100%;
+		margin-right: 0;
+		.shadow-lg {
+			@include box-shadow(none !important);
+		}
+	}
+	
+	#slide-line {
+		display: none !important;
+	}
+	
+}
+

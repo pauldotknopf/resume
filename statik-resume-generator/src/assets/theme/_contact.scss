@@ -1,0 +1,95 @@
+.speech-bubble {
+	position: relative;
+	&:before {
+		content: "";
+	    display: block;
+	    width: 0;
+	    height: 0;
+	    border-left: 10px solid transparent;
+	    border-right: 10px solid transparent;
+	    border-bottom: 10px solid #fff;
+	    position: absolute;
+        top: -10px;
+	    left: 50%;
+	    margin-left: -10px;
+	}
+}
+
+.social-list-color {
+	a {
+		width: 36px;
+		height: 36px;
+		padding-top: 0.2rem;
+		display: inline-block;
+		text-align: center;
+		@include border-radius(4px);
+		@include transition(all 0.4s ease-in-out);
+		color: #fff;
+		font-size: 1.25rem;
+		&.twitter {
+			background-color: $twitter-color;
+			&:hover {
+				background-color: darken($twitter-color, 10%);
+			}
+			
+		}
+		
+		&.facebook {
+			background-color: $facebook-color;
+			&:hover {
+				background-color: darken($facebook-color, 10%);
+			}
+			
+		}
+		
+		&.github {
+			background-color: $github-color;
+			&:hover {
+				background-color: darken($github-color, 10%);
+			}
+			
+		}
+		&.stack-overflow {
+			background-color: $stackoverflow-color;
+			&:hover {
+				background-color: darken($stackoverflow-color, 10%);
+			}
+			
+		}
+		&.linkedin {
+			background-color: $linkedin-color;
+			&:hover {
+				background-color: darken($linkedin-color, 10%);
+			}
+			
+		}
+		&.codepen {
+			background-color: $codepen-color;
+			&:hover {
+				background-color: darken($codepen-color, 10%);
+			}
+			
+		}
+		&.instagram {
+			background-color: $instagram-color;
+			&:hover {
+				background-color: darken($instagram-color, 10%);
+			}
+			
+		}
+		&.medium {
+			background-color: $medium-color;
+			&:hover {
+				background-color: darken($medium-color, 10%);
+			}
+			
+		}
+	}
+}
+
+.contact-form {
+	.error {
+		color: $theme-error;
+		padding-top: 0.5rem;
+	}
+}

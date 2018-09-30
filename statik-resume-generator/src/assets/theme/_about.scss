@@ -1,0 +1,239 @@
+/* ============= About Page ============= */
+.profile-image {
+	max-width:240px;
+}
+
+.section-title {
+	font-size: 1.75rem;
+}
+
+.section-intro {
+	max-width: $theme-width-restrict;
+}
+
+.skills-cat {
+	font-size: 1.25rem;
+}
+
+.skills-icon-holder {
+	background: $theme-color-primary;
+	width: 80px;
+	height: 80px;
+	padding-top: 1.25rem;
+	top: -40px;
+	left: 50%;
+	margin-left: -40px;
+}
+
+
+
+.logo img {
+	@include opacity(0.5);
+	&:hover {
+		@include opacity(0.7);
+	}
+}
+
+.quote-icon {
+	left: 2rem;
+	top: 2rem;
+}
+
+.quote-source {
+	font-size: 0.875rem;
+}
+
+.client-profile img {
+	width: 80px;
+}
+
+
+
+
+/* Testimonial Flicity Carousel */
+.flickity-viewport {
+	padding-top: 1.5rem;
+	padding-bottom: 3rem;
+	@include transition(height 0.2s);
+	@include reset-box-sizing();
+}
+.flickity-page-dots .dot {
+	background: $theme-text-color-primary;
+}
+.testimonial-item {
+  width: 60%; /* half-width */
+  height: auto;
+  margin-right: 3rem;
+  &:after  {
+	  content: "";
+	  display:block;
+	  width:100%;
+	  height: 100%;
+	  background: rgba(256, 256, 256, 0.5);
+	  left: 0;
+	  top: 0;
+	  position: absolute;
+  }
+
+  &.is-selected {
+	  &:after {
+		  display: none;
+	  }
+  }
+}
+
+.blockquote {
+	font-size: 1rem;
+}
+
+
+.source-link {
+	right: 3rem;
+	bottom: 3rem;
+	
+	.fa-linkedin {
+		color: $linkedin-color;
+	}
+}
+
+
+
+
+/* Featured Projects */
+.project-cards {
+	.card-title {
+		font-size: 1.125rem;
+		a {
+			color: $theme-text-color-primary;
+		}
+	}
+
+	.card-img-container {
+		overflow: hidden;
+		
+		&:hover {
+			.overlay-logo {
+				@include opacity(0);
+			}
+			.overlay-content {
+				margin-top: 0;
+			}
+		}
+	}
+	
+	.card-img-overlay {
+		color: #fff;
+		@include transition(all 0.4s ease-in-out);
+
+		&.overlay-logo {
+			margin-top: 0;
+			background:rgba($theme-text-color-primary, 0.6);
+			.project-logo {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				top: 50%;
+				margin-top: -38px;
+			}
+		}
+		
+		&.overlay-content {
+			margin-top: 600px;
+			background:rgba(darken($theme-color-primary, 15%), 0.95);
+			text-decoration: none;
+		}
+		
+	}
+}
+
+/* Latest blog */
+.blog-cards {
+	.meta {
+		color: $theme-text-color-light;
+		font-size: 0.875rem;
+		a {
+			color: $theme-text-color-light;
+			&:hover {
+				color: $theme-text-color-secondary;
+			}
+		}
+	}
+	.card-title {
+		font-size: 1.25rem;
+	}
+	
+	.card-img-container {
+		overflow: hidden;
+		background: $theme-text-color-primary;
+		.card-img-top {
+			@include opacity(1);
+			@include transition(all 0.6s ease-in-out);
+		}
+		
+		&:hover {
+			.card-img-top {
+				@include scale(1.05);
+				@include opacity(0.2);
+				
+			}
+			.overlay-mask  {
+                display: block;
+
+			}
+		}
+	}
+	
+	.card-img-overlay {
+		
+		
+		&.overlay-mask {
+			color: #fff;
+			display: none;
+		}
+
+		.overlay-mask-content {
+
+			@include transition(all 0.4s ease-in-out);
+			top: 50%;
+			margin-top: -19px;
+			.btn {
+				position: relative;
+				z-index:10;
+			}
+
+		}
+		.overlay-mask-link {
+
+			@include transition(all 0.4s ease-in-out);
+			left: 0;
+			top: 0;
+			
+			
+		}
+		
+	}
+}
+
+/* Press section */
+.press-logos {
+
+}
+
+/* CTA section */
+.profile-small {
+	width: 80px;
+	height: 80px;
+}
+
+.profile-medium {
+	width: 160px;
+	height: 160px;
+}
+
+.profile-large {
+	width: 180px;
+//     height: 180px;
+}
+
+
+

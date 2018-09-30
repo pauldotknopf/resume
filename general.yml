@@ -1,0 +1,5 @@
+resume_repo:
+  name: github.com/pauldotknopf/resume
+  url: https://github.com/pauldotknopf/resume
+  icon: fab fa-github
+cname: resume.pknopf.com
