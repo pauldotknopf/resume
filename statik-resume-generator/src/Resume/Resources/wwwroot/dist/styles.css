@@ -11179,3 +11179,7 @@ a.theme-btn-on-bg, .theme-btn-on-bg {
 
 .header-intro-resume {
   height: 220px; }
+
+@media (max-width: 767.98px) {
+  .header {
+    display: none; } }

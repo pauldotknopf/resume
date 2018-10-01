@@ -46,3 +46,9 @@
 .header-intro-resume {
     height: 220px;
 }
+
+@include media-breakpoint-down(sm) {
+    .header {
+        display: none;
+    }
+}
