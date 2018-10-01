@@ -107,7 +107,7 @@ projects:
       url: https://godarch.com/
       icon: fab fa-github
     description: |
-      Think "Dockerfiles", but for immutable, stateless, graphical (or not) environments, booted bare-metal. I use this tool as my daily driver for Linux. Each distribution contains a custom initramfs that overlays a temporary file system over your read-only Darch images. This allows each boot to be a clean boot. Any change made to the runtime (```apt-get install```, etc) are discarded on each boot. Any change you want persisted have to be scripted and baked into your recipes (which is a good thing!).
+      Think "Dockerfiles", but for immutable, stateless, graphical (or not) environments, booted bare-metal. I use this tool as my daily driver for Linux. Each distribution contains a custom initramfs that overlays a temporary file system over your read-only Darch images. This allows each boot to be a clean boot. Any change made to the runtime (```apt-get install```, etc) are discarded on each boot. Any change you want persisted has to be scripted and baked into your recipes (which is a good thing!).
     tech_used:
       - Go
       - Docker
