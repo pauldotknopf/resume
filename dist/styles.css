@@ -11183,3 +11183,7 @@ a.theme-btn-on-bg, .theme-btn-on-bg {
 @media (max-width: 767.98px) {
   .header {
     display: none; } }
+
+@media print {
+  .resume-wrapper-inner {
+    box-shadow: none !important; } }
