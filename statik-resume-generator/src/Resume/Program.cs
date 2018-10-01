@@ -32,8 +32,8 @@ namespace Resume
                 {
                     services.Configure<RazorViewEngineOptions>(options =>
                     {
-                        options.FileProviders.Add(new EmbeddedFileProvider(typeof(Program).Assembly, "Resume.Resources"));
-                        //options.FileProviders.Add(new PhysicalFileProvider("/Users/pknopf/git/resume/statik-resume-generator/src/Resume/Resources"));
+                        //options.FileProviders.Add(new EmbeddedFileProvider(typeof(Program).Assembly, "Resume.Resources"));
+                        options.FileProviders.Add(new PhysicalFileProvider("/Users/pknopf/git/resume/statik-resume-generator/src/Resume/Resources"));
                     });
                 });
                 
@@ -63,8 +63,8 @@ namespace Resume
 
         private static void RegisterResources()
         {
-            _webBuilder.RegisterFileProvider(new EmbeddedFileProvider(typeof(Program).Assembly, "Resume.Resources.wwwroot"));
-            //_webBuilder.RegisterFileProvider(new PhysicalFileProvider("/Users/pknopf/git/resume/statik-resume-generator/src/Resume/Resources/wwwroot"));
+            //_webBuilder.RegisterFileProvider(new EmbeddedFileProvider(typeof(Program).Assembly, "Resume.Resources.wwwroot"));
+            _webBuilder.RegisterFileProvider(new PhysicalFileProvider("/Users/pknopf/git/resume/statik-resume-generator/src/Resume/Resources/wwwroot"));
             var staticDirectory = Path.Combine(_contentDirectory, "static");
             if (Directory.Exists(staticDirectory))
             {
@@ -109,6 +109,16 @@ namespace Resume
             {
                 controller = "Resume",
                 action = "Index"
+            });
+            _webBuilder.RegisterMvc("/template", new
+            {
+                controller = "Resume",
+                action = "Template"
+            });
+            _webBuilder.RegisterMvc("/resume.pdf", new
+            {
+                controller = "Resume",
+                action = "Pdf"
             });
         }
         

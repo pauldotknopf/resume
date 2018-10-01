@@ -1,0 +1,35 @@
+@using Resume.Config
+@inject ResumeConfig Config
+<section class="resume-section experience-section mb-5">
+    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Work Experience</h2>
+    <div class="resume-section-content">
+        <div class="resume-timeline position-relative">
+            @foreach (var experience in Config.Resume.Experience)
+            {
+                <article class="resume-timeline-item position-relative pb-5">
+                    <div class="resume-timeline-item-header mb-2">
+                        <div class="d-flex flex-column flex-md-row">
+                            <h3 class="resume-position-title font-weight-bold mb-1">@experience.Title</h3>
+                            <div class="resume-company-name ml-auto">@experience.Company</div>
+                        </div>
+                        <div class="resume-position-time">@experience.Time</div>
+                    </div>
+                    <div class="resume-timeline-item-desc">
+                        @Html.Raw(experience.Description)
+                        @if (experience.TechUsed != null && experience.TechUsed.Count > 0)
+                        {
+                            <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
+                            <ul class="list-inline">
+                                @foreach (var tech in experience.TechUsed)
+                                {
+                                    <li class="list-inline-item"><span class="badge badge-secondary badge-pill">@tech</span></li>
+                                }
+                            </ul>
+                        }
+                    </div>
+                </article>
+            }
+
+        </div>
+    </div>
+</section>

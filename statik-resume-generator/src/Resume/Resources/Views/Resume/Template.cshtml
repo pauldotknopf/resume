@@ -1,0 +1,40 @@
+@inject Resume.Config.ResumeConfig Config
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<title>@Config.Personal.Name - Resume</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1000, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+	<link href="@Url.Content("~/dist/styles.css")" rel="stylesheet" type="text/css"/>
+	<script src="@Url.Content("~/dist/scripts.js")"></script>
+	<style type="text/css">
+		html {
+			-webkit-print-color-adjust: exact;
+		}
+	</style>
+</head> 
+<body class="print">
+<header class="header">
+	<div class="header-intro header-intro-resume theme-bg-primary text-white py-5">
+		<div class="container position-relative">
+			<h2 class="page-heading mb-3">Resume</h2>
+			<a class="btn theme-btn-on-bg download-resume position-absolute font-weight-bold mx-auto" href="#"><i class="fas fa-download mr-2"></i>Download PDF Version</a>
+		</div>
+	</div>
+</header>
+<article class="resume-wrapper text-center position-relative">
+	<div class="resume-wrapper-inner mx-auto text-left">
+		@await Html.PartialAsync("_RenderHeader")
+		<div class="resume-body pt-5 pb-5">
+			@await Html.PartialAsync("_RenderSummary")
+			@await Html.PartialAsync("_RenderExperience")
+			@await Html.PartialAsync("_RenderSkills")
+			@await Html.PartialAsync("_RenderProjects")
+			@await Html.PartialAsync("_RenderEducation")
+		</div>
+	</div>
+</article>
+</body>
+</html> 

@@ -40,6 +40,7 @@ experience:
       - Docker
       - SQLite
       - MongoDB
+      - Postgres
       - C/C++
       - DICOM
       - HL7

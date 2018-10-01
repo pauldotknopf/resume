@@ -1,0 +1,17 @@
+@using Resume.Config
+@inject ResumeConfig Config
+<section class="resume-section education-section mb-5">
+    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Education</h2>
+    <div class="resume-section-content">
+        <ul class="list-unstyled">
+            @foreach (var education in Config.Resume.Education)
+            {
+                <li class="@(Config.Resume.Education.IndexOf(education) < (Config.Resume.Education.Count - 1) ? "mb-2" : "")">
+                    <div class="resume-degree font-weight-bold">@education.Major</div>
+                    <div class="resume-degree-org">@education.School</div>
+                    <div class="resume-degree-time">@education.Time</div>
+                </li>
+            }
+        </ul>
+    </div>
+</section>

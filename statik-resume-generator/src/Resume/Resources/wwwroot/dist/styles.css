@@ -11179,3 +11179,9 @@ a.theme-btn-on-bg, .theme-btn-on-bg {
 
 .header-intro-resume {
   height: 220px; }
+
+body.print {
+  background: white; }
+
+.experience-section .resume-timeline-item {
+  page-break-inside: avoid; }

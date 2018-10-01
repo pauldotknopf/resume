@@ -26,4 +26,12 @@
     <PackageReference Include="YamlDotNet" Version="5.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="Resources\Views\Shared\_RenderEducation.cshtml" />
+    <Content Include="Resources\Views\Shared\_RenderExperience.cshtml" />
+    <Content Include="Resources\Views\Shared\_RenderHeader.cshtml" />
+    <Content Include="Resources\Views\Shared\_RenderProjects.cshtml" />
+    <Content Include="Resources\Views\Shared\_RenderSkills.cshtml" />
+  </ItemGroup>
+
 </Project>

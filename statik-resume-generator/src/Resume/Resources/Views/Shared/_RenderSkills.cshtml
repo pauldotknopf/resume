@@ -1,0 +1,19 @@
+@using Resume.Config
+@inject ResumeConfig Config
+<section class="resume-section skills-section mb-5">
+    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Skills &amp; Tools</h2>
+    <div class="resume-section-content row">
+        @foreach (var skillGroup in Config.Resume.Skills)
+        {
+            <div class="resume-skill-item col-12 col-md-6">
+                <h4 class="resume-skills-cat font-weight-bold">@skillGroup.GroupName</h4>
+                <ul class="list-inline">
+                    @foreach (var skill in skillGroup.Values)
+                    {
+                        <li class="list-inline-item"><span class="badge badge-light">@skill</span></li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+</section>

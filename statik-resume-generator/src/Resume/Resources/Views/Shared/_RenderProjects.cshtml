@@ -1,0 +1,31 @@
+@using Resume.Config
+@inject ResumeConfig Config
+@if (Config.Resume.Projects.Count > 0)
+{
+    <section class="resume-section reference-section mb-5">
+        <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Projects</h2>
+        <div class="resume-section-content">
+            <ul class="list-unstyled resume-projects-list">
+                @foreach (var project in Config.Resume.Projects)
+                {
+                    <li class="mb-5">
+                        <div class="resume-project-name">@project.Name &nbsp;&nbsp;<a class="resume-project-link" href="@project.Link.Url"><i class="@project.Link.Icon" data-fa-transform="shrink-2"></i> @project.Link.Name</a></div>
+                        <div class="resume-project-desc">
+                            @Html.Raw(project.Description)
+                            @if (project.TechUsed.Count > 0)
+                            {
+                                <h4 class="resume-project-item-desc-heading font-weight-bold">Technologies used:</h4>
+                                <ul class="list-inline">
+                                    @foreach (var tech in project.TechUsed)
+                                    {
+                                        <li class="list-inline-item"><span class="badge badge-secondary badge-pill">@tech</span></li>
+                                    }
+                                </ul>
+                            }
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    </section>
+}
