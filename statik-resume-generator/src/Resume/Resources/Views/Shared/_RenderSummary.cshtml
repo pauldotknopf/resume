@@ -1,0 +1,8 @@
+@using Resume.Config
+@inject ResumeConfig Config
+<section class="resume-section summary-section mb-5">
+    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Career Summary</h2>
+    <div class="resume-section-content">
+        @Html.Raw(Config.Resume.Career)
+    </div>
+</section>
