@@ -52,3 +52,9 @@
         display: none;
     }
 }
+
+@media print {
+    .resume-wrapper-inner {
+        box-shadow: none !important;
+    }
+}
