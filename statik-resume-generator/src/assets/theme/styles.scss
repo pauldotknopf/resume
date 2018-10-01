@@ -57,4 +57,25 @@
     .resume-wrapper-inner {
         box-shadow: none !important;
     }
+    .resume-wrapper {
+        margin-top: -220px;
+        padding-bottom: 0;
+    }
+    .resume-body {
+        padding-bottom: 0px !important;
+    }
+    .footer {
+        display: none;
+    }
+}
+
+.experience-section {
+    page-break-before: always;
+}
+
+.skills-section,
+.resume-timeline-item,
+.resume-projects-list li,
+.education-section {
+    page-break-inside: avoid;
 }
