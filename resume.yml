@@ -185,6 +185,13 @@ skills:
       - Makefile
       - CMake
       - Meson
+  - group_name: Databases
+    values:
+      - Postgres
+      - MongoDB
+      - SQL Server
+      - SQLite
+      - Cassandra
 education:
   - major: MCPD/MCTS .NET Web Developer
     time: "MCP ID: 8482776"
