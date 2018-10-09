@@ -5,7 +5,7 @@ career: |
 
   I enjoy building creative solutions to complex problems (and the teams surrounding them) that provide high value to the end users. Using simplicity, expressiveness and maintainability to incrementally and iteratively provide value, I can ensure that the solutions I build are built-to-last, while also being flexible enough to reflect constantly changing requirements.
 
-  While I am confortable in many languages/environments, what I enjoy the most is .NET/React/TypeScript (Angular too, but I haven't gotten my hands dirty). The early part of my career had been primarily focused on Windows, but I tend to lean more on unix operating systems (Linux/OSX). I'm my strongest in a terminal, which Windows just isn't well-suited for.
+  While I am comfortable in many languages/environments, what I enjoy the most is .NET/React/TypeScript (Angular too, but I haven't gotten my hands dirty). The early part of my career had been primarily focused on Windows, but I tend to lean more on unix operating systems (Linux/OSX). I'm my strongest in a terminal, which Windows just isn't well-suited for.
 
   I also love the CI/CD side of engineering. Working with a team/organization to determine the best approach to commit and deploy with confidence is a challenge I will always take. Once developers get into the groove of developing features without fires to be hosed or tooling to fight, life becomes a little better for *everybody*.
 
@@ -53,7 +53,7 @@ experience:
     title: Software Engineer
     time: Jun 2011 - Dec 2012
     description: |
-      * Managed/maintained production instances of IIS/SQL Server for many high-volume sites (coleman.com, rawling.com).
+      * Managed/maintained production instances of IIS/SQL Server for many high-volume sites (coleman.com, rawlings.com).
       * Managed a prescriptive framework written in C# .NET 4.0 used to accelerate and model application development according to industry best practices.
       * Managed an internal automated NuGet feed (using TFS Build) for delivering updates.
       * Database design and development. Managing indexes/performance. Troubleshooting with SQL Profiler.
