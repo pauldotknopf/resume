@@ -4,6 +4,9 @@ email: pauldotknopf@gmail.com
 phone: (941) 807-5340
 image: ~/profile1.png
 links:
+  - name: pknopf.com
+    url: https://pknopf.com
+    icon: fas fa-globe
   - name: github.com/pauldotknopf
     url: https://github.com/pauldotknopf
     icon: fab fa-github
