@@ -5,7 +5,7 @@ career: |
 
   I enjoy building creative solutions to complex problems (and the teams surrounding them) that provide high value to the end users. Using simplicity, expressiveness and maintainability to incrementally and iteratively provide value, I can ensure that the solutions I build are built-to-last, while also being flexible enough to reflect constantly changing requirements.
   
-  I have a proven record of leading teams and establishing processes that provide consitent quality and delivery.
+  I have a proven record of leading teams and establishing processes in design and development that provide consitent quality and delivery.
 
   While I am comfortable in many languages/environments, what I enjoy the most is .NET/React/TypeScript (Angular too, but I haven't gotten my hands dirty). The early part of my career had been primarily focused on Windows, but I tend to lean more on unix operating systems (Linux/OSX). I'm my strongest in a terminal, which Windows just isn't well-suited for.
 
@@ -21,9 +21,9 @@ experience:
     description: |
       Managing a team of people on a wide-array of projects across different languages/platforms. 
       Managing the internal DevOps life-cycle (commit, review, build, version, deploy, and support) for embedded systems (Linux and Windows) and web projects (Docker/ASP.NET MVC/etc).
-
+      
       **Some key points:**
-      * Develop/design recording software for the medical industry.
+      * Develop/design recording software for the medical industry, implementation of IDesign's "The Method", an approach for system and project design.
       * DirectShow and gstreamer for encoding/decoding with various video formats, including H264/MP4.
       * WPF and Qt/QtQuick implementations of digital recording software on embedded devices.
       * iOS/Android application development using the Xamarin platform.
