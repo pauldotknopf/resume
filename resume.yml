@@ -40,17 +40,15 @@ experience:
       - WPF
       - Qt
       - Docker
-      - SQLite
-      - MongoDB
-      - Postgres
+      - SQLite/MongoDB/Postgres
       - C/C++
-      - DICOM
-      - HL7
-      - Embedded Linux
-      - Google Cloud Platform
-      - Continuous Integration
+      - Golang
+      - JavaScript/TypeScript
+      - DICOM/HL7
+      - Linux (Embedded, Sys Admin)
+      - Cloud (Google Cloud Platform/Microsoft Azure)
+      - CI/CD (Pipelines)
       - Unit Testing
-      - Atlassian
   - company: MethodFactory
     title: Software Engineer
     time: Jun 2011 - Dec 2012
