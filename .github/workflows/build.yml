@@ -1,0 +1,32 @@
+name: .NET
+
+on:
+  push:
+    branches: [ staging ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 2.1.402
+    - name: Setup
+      env:
+        DEPLOY_KEY_PASSWORD: ${{ secrets.DEPLOY_KEY_PASSWORD }}
+      run: |
+        gpg --quiet --batch --yes --decrypt --passphrase="${DEPLOY_KEY_PASSWORD}" --output deploy-key deploy-key.gpg
+        chmod 600 deploy-key
+
+    - name: Build
+      run: |
+        eval `ssh-agent -s`
+        ssh-add deploy-key
+        ./build.sh ci
