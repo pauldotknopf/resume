@@ -158,10 +158,10 @@ skills:
       - jQuery
   - group_name: Mobile
     values:
+      - iOS/Android (Xamarin)
       - xCode
       - UIKit
       - Objective-C
-      - Xamarin
   - group_name: Operating systems
     values:
       - Unix/Linux
