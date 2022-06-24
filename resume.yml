@@ -156,6 +156,12 @@ skills:
       - SSR
       - Electron
       - jQuery
+  - group_name: Mobile
+    values:
+      - xCode
+      - UIKit
+      - Objective-C
+      - Xamarin
   - group_name: Operating systems
     values:
       - Unix/Linux
@@ -170,6 +176,13 @@ skills:
       - Arch
       - Gentoo
       - VoidLinux
+  - group_name: Cloud
+    vaues:
+      - Teraform
+      - Microsoft Azure
+      - Google Cloud
+      - Containers (docker/lxc)
+      - Azure Pipelines/GitHub Actions/Jenkins
   - group_name: IDEs/Debuggers/Compilers/Source Control
     values:
       - Visual Studio
@@ -192,6 +205,7 @@ skills:
       - SQL Server
       - SQLite
       - Cassandra
+      - Lucense/ElasticSearch
 education:
   - major: MCPD/MCTS .NET Web Developer
     time: "MCP ID: 8482776"
