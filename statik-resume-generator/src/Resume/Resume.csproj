@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>net6</TargetFramework>
 
     <!--
       This is required for compiling razor views in a console app.
@@ -18,11 +18,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Markdig" Version="0.15.3" />
-    <PackageReference Include="PowerArgs" Version="3.5.0" />
-    <PackageReference Include="Statik" Version="0.8.0" />
-    <PackageReference Include="Statik.Files" Version="0.8.0" />
-    <PackageReference Include="Statik.Mvc" Version="0.8.0" />
+    <PackageReference Include="Markdig" Version="0.30.2" />
+    <PackageReference Include="PowerArgs" Version="3.6.0" />
+    <PackageReference Include="Statik" Version="0.14.0" />
+    <PackageReference Include="Statik.Files" Version="0.14.0" />
+    <PackageReference Include="Statik.Mvc" Version="0.14.0" />
     <PackageReference Include="YamlDotNet" Version="5.1.0" />
   </ItemGroup>
 

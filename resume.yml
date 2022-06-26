@@ -177,7 +177,7 @@ skills:
       - Gentoo
       - VoidLinux
   - group_name: Cloud
-    vaues:
+    values:
       - Teraform
       - Microsoft Azure
       - Google Cloud

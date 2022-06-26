@@ -7,7 +7,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -17,7 +17,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 2.1.402
+        dotnet-version: 6.0.301
     - name: Setup
       env:
         DEPLOY_KEY_PASSWORD: ${{ secrets.DEPLOY_KEY_PASSWORD }}

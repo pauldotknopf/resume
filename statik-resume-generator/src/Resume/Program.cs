@@ -3,10 +3,8 @@ using System.IO;
 using System.Threading.Tasks;
 using Markdig;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.FileProviders;
 using PowerArgs;
 using Resume.Config;
 using Statik.Embedded;
@@ -30,10 +28,9 @@ namespace Resume
                 _webBuilder.RegisterMvcServices();
                 _webBuilder.RegisterServices(services =>
                 {
-                    services.Configure<RazorViewEngineOptions>(options =>
-                    {
+                    services.Configure<MvcRazorRuntimeCompilationOptions>(options => {
+                        options.FileProviders.Clear();
                         options.FileProviders.Add(new EmbeddedFileProvider(typeof(Program).Assembly, "Resume.Resources"));
-                        //options.FileProviders.Add(new PhysicalFileProvider("/Users/pknopf/git/resume/statik-resume-generator/src/Resume/Resources"));
                     });
                 });
                 
