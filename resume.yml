@@ -32,7 +32,7 @@ experience:
         * Brickless update design.
         * Read-only boot with ```tmpfs``` overlay for stability and resilience.
       * Compilation and cross-compilation (vc++, gcc, MAKE, CMAKE, meson, autotools, etc).
-      * ASP.NET (and .NET Core) for physicians and patients to view studies.
+      * ASP.NET (and .NET Core) React application for physicians and patients to view studies.
       * Manage IT infrastructure for software and project management.
     tech_used:
       - .NET
