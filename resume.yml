@@ -25,6 +25,7 @@ experience:
       Managing the internal DevOps life-cycle (commit, review, build, version, deploy, and support) for embedded systems (Linux and Windows) and web projects (Docker/ASP.NET MVC/etc).
       
       **Some key points:**
+      * ASP.NET (and .NET Core) React application for physicians and patients to view studies, on-site deployments with automated updates.
       * Develop/design recording software for the medical industry, implementation of IDesign's "The Method", an approach for system and project design.
       * DirectShow and gstreamer for encoding/decoding with various video formats, including H264/MP4.
       * WPF and Qt/QtQuick implementations of digital recording software on embedded devices.
@@ -34,7 +35,6 @@ experience:
         * Brickless update design.
         * Read-only boot with ```tmpfs``` overlay for stability and resilience.
       * Compilation and cross-compilation (vc++, gcc, MAKE, CMAKE, meson, autotools, etc).
-      * ASP.NET (and .NET Core) React application for physicians and patients to view studies.
       * Manage IT infrastructure for software and project management.
     tech_used:
       - .NET
