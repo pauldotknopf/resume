@@ -7,9 +7,11 @@ career: |
   
   I have a proven record of leading teams and establishing processes in design and development that provide consitent quality and delivery.
 
-  While I am comfortable in many languages/environments, what I enjoy the most is .NET/React/TypeScript (Angular too, but I haven't gotten my hands dirty). The early part of my career had been primarily focused on Windows, but I tend to lean more on unix operating systems (Linux/OSX). I'm my strongest in a terminal, which Windows just isn't well-suited for.
+  The early part of my career had been primarily focused on Windows, but I tend to lean more on unix operating systems (Linux/OSX). I'm my strongest in a terminal, which Windows just isn't well-suited for.
 
   I also love the CI/CD side of engineering. Working with a team/organization to determine the best approach to commit and deploy with confidence is a challenge I will always take. Once developers get into the groove of developing features without fires to be hosed or tooling to fight, life becomes a little better for *everybody*.
+
+  I've built and deployed many high-throughput APIs/endpoints, dealing with all the complexity involved (deployment models, load balancing, caching/invalidation).
 
   I manage a few open-source projects in different languages, including JavaScript, C# and Go.
 
