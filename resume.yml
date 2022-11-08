@@ -17,9 +17,18 @@ career: |
 
   Also, I'll be the first to tell you that I've made mistakes in my career, but I use them to my advantage. Remember, incremental improvement!
 experience:
+  - company: Ensemble Health Partners
+    title: Senior Software Engineer
+    time: Aug 2022 - Present
+    description: |
+      Member of a cross-functional team, introducing new infrastructure, improving deployments.
+      * .NET Core
+      * Azure DevOps
+      * Azure Pipelines
+      * Terraform
   - company: Med X Change
     title: Senior Software Engineer
-    time: Nov 2012 - Present
+    time: Nov 2012 - Aug 2022
     description: |
       Managing a team of people on a wide-array of projects across different languages/platforms. 
       Managing the internal DevOps life-cycle (commit, review, build, version, deploy, and support) for embedded systems (Linux and Windows) and web projects (Docker/ASP.NET MVC/etc).
